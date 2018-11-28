@@ -1,0 +1,84 @@
+<import src="../compoments/item_template/item_template.wxml" />
+<!-- 轮播图 -->
+<template is="swiper" data='{{list}}'>
+</template>
+<view class='divider'></view>
+<!--超市抢购-->
+<view class='spm-shop'>
+	<view class='banner'>
+		<image src='http://127.0.0.1:3000/img/spm/spm (1).png' mode='aspectFill' lazy-load></image>
+	</view>
+	<view class='divider'></view>
+  <view class='spm-swiper'>
+    <swiper class='spm-item' display-multiple-items="3" previous-margin='20rpx'>
+      <block wx:for="{{shoplist}}" wx:key="item.id">
+        <swiper-item>
+          <view class='spm-content'>
+						<image src="{{item.img_url}}" mode="aspectFill" lazy-load></image>
+          	<view class='spm-shop-tags'>
+            	<view>爆款</view>
+            	<view>抢购</view>
+          	</view>
+          	<view class='spm-shop-content'>
+							<view class='spm-shop-title'>
+								<text class='txt-title'>{{item.title}}</text>
+							</view>
+            	<view class='spm-price'>
+								<view>
+									<text class="spm-price-now">￥{{item.now}}</text>
+									<text class="spm-price-old">￥{{item.old}}</text>
+								</view>
+								<view class='spm-icon'>抢</view>
+							</view>
+          	</view>
+					</view>
+        </swiper-item>
+      </block>
+    </swiper> 
+  </view>
+</view>
+<view class='divider'></view>
+<!--品牌特卖-->
+<view class='spm-qa'>
+	<view class='spm-banner'>
+			<image src='http://127.0.0.1:3000/img/spm/spm (14).jpg' mode='aspectFill'lazy-load ></image>
+	</view>
+	<view class='qa-item'>
+			<view wx:for='{{qalist}}' wx:key='{{item.id}}'>
+				<image src='{{item.img_url}}'></image>
+			</view>
+	</view>
+</view>
+<view class='divider'></view>
+	<!--品质生活-->
+<view class='qa-life'>
+	<view class='banner'>
+		<image src='http://127.0.0.1:3000/img/spm/spm (2).png' mode='aspectFill' lazy-load></image>
+	</view>
+	</view>
+	<view class='spm-life-banner'>
+			<image src='http://127.0.0.1:3000/img/spm/spm (16).jpg' mode='aspectFill'lazy-load ></image>
+	</view>
+	<view class='divider'></view>
+	<view class='spm-swiper'>
+    <swiper class='spm-item' display-multiple-items="3" previous-margin='20rpx'>
+      <block wx:for="{{shoplist}}" wx:key="item.id">
+        <swiper-item>
+          <view class='spm-content'>
+						<image src="{{item.img_url}}" mode="aspectFill" lazy-load></image>
+          	<view class='spm-shop-content'>
+							<view class='spm-shop-title'>
+								<text class='txt-title'>{{item.title}}</text>
+							</view>
+            	<view class='spm-price'>
+								<view>
+									<text class="spm-price-now">￥{{item.now}}</text>
+								</view>
+							</view>
+          	</view>
+					</view>
+        </swiper-item>
+      </block>
+    </swiper>
+	<view class='divider'></view>
+</view>

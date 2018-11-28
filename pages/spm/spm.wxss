@@ -1,0 +1,94 @@
+/* pages/spm/spm.wxss */
+@import "../compoments/item_template/item_template.wxss";
+
+.banner,.banner>image{
+	width: 100%;
+	height: 64rpx;
+}
+swiper.spm-item{
+	font-size:12px;
+	height:360rpx;
+}
+swiper-item>.spm-content{
+	width:220rpx;
+	background: #fff;
+}
+.spm-item image,.spm-shop-content{
+	width:190rpx;
+	height:190rpx;
+}
+.spm-shop-content{
+	padding:20rpx 0 0 20rpx;
+	box-sizing: border-box;
+}
+.spm-shop-tags{
+	width:65rpx;
+	height:65rpx;
+	text-align: center;
+	position:absolute;
+	top:0;
+	border:1rpx solid #C81623;
+	border-radius: 5rpx;
+	background: #fff;
+	font-size:12px;
+}
+.spm-shop-tags>view:last-child{
+	background:  #C81623;
+	color: #fff;
+	padding-bottom:5rpx;
+}
+.spm-shop-title{
+	height:35rpx;
+	padding-bottom:40rpx;
+}
+.spm-shop-title text{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	word-break: break-all;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.spm-price{
+	width:190rpx;
+	display: flex;
+	justify-content: space-between;
+	height:80rpx;
+}
+.spm-price-now{
+	color:#C81623;
+}
+.spm-price-old{
+	text-decoration: line-through;
+}
+.spm-price>view:first-child{
+	display: flex;
+	flex-direction: column;
+}
+.spm-price>view.spm-icon{
+	width:50rpx;
+	height:70rpx;
+	background: #C81623;
+	border-radius: 5px;
+	color:#fff;
+	text-align: center;
+	line-height:70rpx;
+	font-size: 18px;
+}
+.spm-banner,.spm-banner>image{
+	width:100%;
+	height:400rpx;
+}
+.qa-item{
+	margin:20rpx;
+	display: flex;
+	justify-content:space-around;
+}
+.qa-item image{
+	width:220rpx;
+	height:240rpx;
+}
+.spm-life-banner,.spm-life-banner>image{
+	width:100%;
+	height:200rpx;
+}

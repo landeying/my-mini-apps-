@@ -1,0 +1,13 @@
+<!--pages/home/home.wxml-->
+<import src="../compoments/item_template/item_template.wxml" />
+<!-- 轮播图 -->
+<template is="swiper" data='{{list}}'>
+</template>
+<!-- 六宫格 -->
+<view class="index-nav">
+  <view class="nav-item" wx:for="{{iconlist}}" wx:key="item.id">
+    <image src='{{item.img_url}}' mode='aspectFill' bindtap='handleJumpMore' data-id='{{item.id}}'></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>
+<!-- 按钮 -->

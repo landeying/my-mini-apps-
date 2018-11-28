@@ -1,0 +1,12 @@
+
+<view class='shop' wx:for='{{goodslist}}' wx:key='{{item.id}}'>
+  <image src='{{item.img_url}}' class='shop-img' />
+  <view class='shop-info'>
+		<text class='shop-title'>{{item.title}}</text>
+		<text class='shop-price-now'>￥{{item.now}}</text>
+		<text class='shop-price-old'>￥{{item.old}}</text>
+	</view>
+	<view class='shop-buy'>
+ 	 	<button class='shop-buy-now' catchtap='handleJumpToShop' data-id='{{index}}'>立即购买</button>
+	</view>
+</view>

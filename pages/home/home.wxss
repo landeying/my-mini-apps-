@@ -1,0 +1,27 @@
+/* pages/home/home.wxss */
+@import "../compoments/item_template/item_template.wxss";
+.index-nav{
+  display: flex;
+  flex-wrap: wrap;
+  padding:2px 15px;
+  border-bottom:10px solid #ddd;
+}
+.index-nav .nav-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size:14px;
+  height:200rpx;
+  width:33.33%;
+  box-sizing: border-box;
+  border-right: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+}
+.index-nav .nav-item:nth-child(3n){
+  border-right:none;
+}
+.index-nav image{
+  width:80rpx;
+  height:80rpx;
+}

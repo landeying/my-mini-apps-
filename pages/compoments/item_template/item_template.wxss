@@ -1,0 +1,6 @@
+/* pages/compoments/item_template/item_template.wxss */
+/* 功能一 轮播图 */
+.slider,.slider swiper,.slider image{
+  height:350rpx;
+  width:100%;
+}

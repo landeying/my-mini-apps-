@@ -1,0 +1,14 @@
+<!--添加商品组件-->
+<view class="card">
+    <form bindsubmit="checkForm" bindreset="">
+        <view class='cell-item'>
+            <input type="text" placeholder="请输入商品编号" name='pno' />
+        </view>
+        <view class='cell-item'>
+            <input type="text" placeholder='商品价格' name='price'/>
+        </view>
+        <view class='cell-item'>
+            <button formType='submit'>添加商品</button>
+        </view>
+    </form>
+</view>

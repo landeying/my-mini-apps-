@@ -1,0 +1,21 @@
+<!--pages/discounts/discounts.wxml-->
+<view class='card-ad'>
+	<image class='card-ad-img' mode='aspectFill' lazy-load src='http://127.0.0.1:3000/img/ad/ad.gif'></image>
+</view>
+<view class='card' wx:for='{{list}}' wx:key='{{item.id}}'>
+	<view class='card-content'>
+		<view class='card-catalog'>{{item.catalog}}</view>
+		<view class='card-right'>
+			<view class='card-r-content'>
+				<text class='card-title'>{{item.title}}</text>
+				<text class='card-subtitle'>{{item.subtitle}}</text>
+			</view>
+			<view class='card-left'>
+				<image class='card-img' mode='aspectFill' lazy-load src='{{item.img_url}}'></image>
+			</view>
+		</view>
+	</view>
+	<view class='card-bottom'>
+		<text class='card-date'>{{item.dtime}}</text>
+	</view>
+</view>

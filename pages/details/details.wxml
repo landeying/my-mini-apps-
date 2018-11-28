@@ -1,0 +1,16 @@
+<view class='details'>
+	<view class='detail-img'>
+			<image class='goods-img' src='http://127.0.0.1:3000/img/detail/details15.jpg'></image>
+			<image class='goods-sail-icon' src='http://127.0.0.1:3000/img/detail/detail.png' lazy-load></image>
+	</view>
+	<view class='detail-content'>
+		<image src="http://127.0.0.1:3000/img/detail/123.png"></image>
+	</view>
+</view>
+<view class="details-info" >
+	<image wx:for='{{list}}' src='{{item.img_url}}' wx:key='{{item.id}}'></image>
+</view>
+<view class='details-footer'>
+	<button class='addCar' bindtap='addCart'>加入购物车</button>
+	<button class='buy-now'>立即购买</button>
+</view>

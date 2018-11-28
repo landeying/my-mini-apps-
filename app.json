@@ -1,0 +1,54 @@
+{
+	"pages": [
+		"pages/goodslist/goodslist",
+		"pages/more/more",
+			"pages/details/details",
+	
+		"pages/profile/profile",
+		"pages/spm/spm",
+		"pages/product/product",
+		"pages/home/home",
+		
+		"pages/discounts/discounts",
+"pages/compoments/item_template/item_template",
+		"pages/shopcart/shopcart"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#C81623",
+		"navigationBarTitleText": "尚成购物",
+		"navigationBarTextStyle": "white",
+		"enablePullDownRefresh": true
+	},
+	"tabBar": {
+		"color": "#000",
+		"selecteColor": "#C81623",
+		"position": "bottom",
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "pages/img/home.png",
+				"selectedIconPath": "pages/img/home-active.png"
+			},
+			{
+				"pagePath": "pages/more/more",
+				"text": "分类",
+				"iconPath": "pages/img/more.png",
+				"selectedIconPath": "pages/img/more-active.png"
+			},
+			{
+				"pagePath": "pages/shopcart/shopcart",
+				"text": "购物车",
+				"iconPath": "pages/img/shop.png",
+				"selectedIconPath": "pages/img/shop-active.png"
+			},
+			{
+				"pagePath": "pages/profile/profile",
+				"text": "我的",
+				"iconPath": "pages/img/profile.png",
+				"selectedIconPath": "pages/img/profile-active.png"
+			}
+		]
+	}
+}

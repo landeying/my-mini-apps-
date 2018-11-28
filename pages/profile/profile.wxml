@@ -1,0 +1,24 @@
+<view class='avatar'>
+	<button wx:if="{{!hasUserInfo && canIUse}}" open-type='getUserInfo' bindgetuserinfo='getUserInfo' class='userinfo-btn'>微信登录</button>
+	<block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
+</view>
+<view class='divider'></view>
+<view class='cell'>
+	<view class='cell-item'>个人资料</view>
+</view>
+<view class='divider'></view>
+<view class='cell'>
+	<view class='cell-item'>我的优惠券</view>
+	<view class='cell-item'>我的订单</view>
+	<view class='cell-item'>我的资产</view>
+	<view class='cell-item'>我的足迹</view>
+</view>
+<view class='divider'></view>
+<view class='cell'>
+	<view class='cell-item'>设置</view>
+</view>
+<view class='divider'></view>
+<button wx:if="{{hasUserInfo}}"  class='islogin-btn' bindtap='isLogin'>退出登录</button>
