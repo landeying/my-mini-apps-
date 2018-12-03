@@ -32,6 +32,22 @@ Page({
 			}
 		})
 	},
+	handleToGList:function(){
+		wx.navigateTo({
+			url: '/pages/goodslist/goodslist',
+		})
+	},
+	handleToDetails:function(e){
+		console.log(e)
+		for (var i = 0; i < this.data.list.length; i++) {
+			if (e.currentTarget.dataset.id == this.data.list[i].id) {
+				this.data.id = this.data.list[i].id
+				wx.navigateTo({
+					url: '/pages/details/details?id=' + this.data.id
+				})
+			}
+		}
+	},
 	/**
 	 * 页面的初始数据
 	 */

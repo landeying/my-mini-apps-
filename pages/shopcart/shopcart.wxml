@@ -1,2 +1,46 @@
-<!--pages/shopcart/shopcart.wxml-->
-<text>pages/shopcart/shopcart.wxml</text>
+<!-- 购物车为空时 -->
+<view class='s-shopping-cart-empty' hidden='{{isShow}}'>
+		<view class='shopping-cart-empty'>
+				<view class='bg'>
+					<image src='/pages/img/bg_cart.png'></image>
+				</view>
+				<view class='cart'></view>
+				<text class='empty-text'>购物车空空如也</text>
+				<navigator url='/pages/goodslist/goodslist'>
+						<button class='shopping-cart-btn'>去购物</button>
+				</navigator>
+		</view>
+</view>
+<!-- 添加商品后 -->
+<view class='s-shopping-cart' hidden='{{isCart}}'>
+		<view class='shopping-cart' wx:for='{{cart}}' wx:key='{{item.id}}'>
+			<view>
+				<checkbox-group bindchange='handleSelect' data-index='{{item.id}}'>
+					<checkbox class='shopping-select' value='{{item.id}}' checked='{{item.checked}}'></checkbox>
+				</checkbox-group>
+				<image class='shopping-img' src='{{item.img_url}}'></image>
+			</view>
+			<view class='shopping-info'>
+				<view class='shopping-item'>
+					<text class='shopping-title'>{{item.title}}</text>
+					<image src='/pages/img/del.png' class='shopping-del' bindtap='handleDel' data-id='{{item.id}}'></image>
+				</view>
+				<view class='shopping'>
+					<text class='shopping-price'>￥{{item.now}}</text>
+					<view class='count-cart'>
+						<button class='sub' bindtap='handeleSub' data-index='{{index}}'>-</button>
+						<text class='count'>{{item.count}}</text>
+						<button class='add' bindtap='handleAdd' data-index='{{index}}'>+</button>
+					</view>
+				</view>
+			</view>
+		</view>	
+</view>
+<!-- 商品结算 -->
+<view class='shopping-settlement'>
+	<view class='sum'>
+		<text>合计:</text>
+		<text>￥{{total}}</text>
+	</view>
+	<text class='go-settlement'>去结算</text>
+</view>

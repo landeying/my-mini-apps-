@@ -29,10 +29,9 @@ Page({
 			if (e.currentTarget.dataset.id+1== this.data.goodslist[i].id){
 				this.data.id = this.data.goodslist[i].id
 				wx.navigateTo({
-					url: '/pages/details/details=' + this.data.id
+					url: '/pages/details/details?id=' + this.data.id
 				})
-			}else
-				return			
+			}	
 		}
 	},
 	/**

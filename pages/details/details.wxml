@@ -1,16 +1,48 @@
 <view class='details'>
-	<view class='detail-img'>
-			<image class='goods-img' src='http://127.0.0.1:3000/img/detail/details15.jpg'></image>
-			<image class='goods-sail-icon' src='http://127.0.0.1:3000/img/detail/detail.png' lazy-load></image>
-	</view>
-	<view class='detail-content'>
-		<image src="http://127.0.0.1:3000/img/detail/123.png"></image>
+	<view class='detail-img' wx:for='{{goodslist}}' wx:key='{{item.id}}' wx:if='{{item.id==id}}'>
+			<image class='goods-img' src='{{item.img_url}}'></image>
+			<image class='goods-sale-icon' src='http://127.0.0.1:3000/img/detail/detail.png' lazy-load></image>
+			<view  class='goods-info'>
+					<view class='goods-row'>
+							<view>
+								<text class='tip-txt-bg-red'>尚城</text>
+								<text class='tip-txt-bg-white'>自营</text>
+							</view>
+							<view  class='goods-title'>
+								<text>{{item.title}}</text>
+							</view>
+					</view>
+					<view class='goods-price goods-row'> 
+							<text class='goods-price-now'>￥{{item.now}}</text>
+							<text class='reduce-price'>降价提醒</text>
+					</view>
+					<view class='goods-discount goods-row'>
+							<view>
+									<text>促销</text>
+							</view>
+							<view>
+									<view class='goods-row'>
+											<text class='tip-txt'>满减</text>
+											<text>满69元、99元、129元可得相应赠品</text>
+									</view>
+									<view class='goods-row'>
+											<text class='tip-txt'>满额返券</text>	
+											<text>12月12日-12月25日期间购买</text>
+									</view>
+									<view class='goods-row'>
+											<text class='tip-txt'>优惠套餐</text>
+											<text>该商品共有1款优惠套餐</text>
+									</view>
+							</view>
+					</view>
+			</view>
 	</view>
 </view>
+<view class='divider'></view>
 <view class="details-info" >
 	<image wx:for='{{list}}' src='{{item.img_url}}' wx:key='{{item.id}}'></image>
 </view>
 <view class='details-footer'>
-	<button class='addCar' bindtap='addCart'>加入购物车</button>
-	<button class='buy-now'>立即购买</button>
+	<button class='addCar' bindtap='addCart' data-id='{{id}}'>加入购物车</button>
+	<button class='buy-now' bindtap='goShopCart'>立即购买</button>
 </view>

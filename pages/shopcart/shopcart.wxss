@@ -1,1 +1,125 @@
-/* pages/shopcart/shopcart.wxss */
+	
+/* 购物车为空 */
+.s-shopping-cart-empty,.shopping-cart-empty{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+}
+.shopping-cart-empty{
+	flex-direction: column;
+	width:50%;
+	height:100%;
+	padding-top:70rpx;
+}
+.bg,.bg>image{
+	width:300rpx;
+	height:300rpx;
+}
+.empty-text{
+	margin:50rpx 0;
+	font-size: 24px;
+	color:#bbb;
+}
+.shopping-cart-btn{
+	width:300rpx;
+	height:80rpx;
+	line-height:80rpx;
+	border: 1px solid #E4007F;
+	color:#E4007F;
+}
+/* 添加商品后 */
+.s-shopping-cart{
+	width:100%;
+	padding-bottom:200rpx;
+}
+.shopping-cart,.shopping-info,.shopping-item,.shopping,.count-cart,.shopping-settlement{
+	display: flex;
+}
+.shopping-cart{
+	background: #fff;
+	justify-content: space-between;
+}
+.shopping-select{
+	border-radius: 100%;
+}
+.shopping-img{
+	width:160rpx;
+	height:180rpx;
+	padding:20rpx 0;
+}
+checkbox .wx-checkbox-input{
+	border-radius: 100%;
+	border:1px solid #aaa;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #C81623;
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+.shopping-select{
+	padding-left:10rpx;
+	transform: translate(0, -150%)
+}
+checkbox-group{
+	display:inline-block;
+}
+.shopping-info{
+	flex-direction: column;
+	justify-content: space-around;
+	width:60%;
+	padding:20rpx 20rpx 0 0;
+}
+.shopping-del{
+	width: 50rpx;
+	height:50rpx;
+}
+.shopping-item,.shopping{
+	justify-content: space-between;
+}
+.count-cart>button{
+		width:50rpx;
+		height:50rpx;
+		text-align: center;
+		line-height: 50rpx;
+		padding:0;
+}
+.shopping-price{
+	color:#C81623
+}
+.count{
+	height:48rpx;
+	border-top:1px solid #E0E0E0;
+	border-bottom:1px solid #E0E0E0;
+	padding: 0 20rpx;
+}
+/* 商品结算 */
+.shopping-settlement{
+	position: absolute;
+	width:100%;
+	bottom:0;
+	justify-content: space-between;
+	background: #fff;
+	text-align: center;
+	line-height: 100rpx;
+}
+.go-settlement{
+	width:200rpx;
+	height:100rpx;
+	background: #C81623;
+	color: #fff;
+	font-size: 14px;
+}
+.sum{
+	font-weight: bold;
+	margin-left: 20rpx;
+}

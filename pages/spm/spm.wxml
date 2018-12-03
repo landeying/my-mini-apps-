@@ -6,13 +6,13 @@
 <!--超市抢购-->
 <view class='spm-shop'>
 	<view class='banner'>
-		<image src='http://127.0.0.1:3000/img/spm/spm (1).png' mode='aspectFill' lazy-load></image>
+		<image src='http://127.0.0.1:3000/img/spm/spm (1).png' mode='aspectFill' lazy-load bindtap='handleToGList'></image>
 	</view>
 	<view class='divider'></view>
   <view class='spm-swiper'>
     <swiper class='spm-item' display-multiple-items="3" previous-margin='20rpx'>
       <block wx:for="{{shoplist}}" wx:key="item.id">
-        <swiper-item>
+        <swiper-item bindtap='handleToDetails' data-id='{{item.id}}'>
           <view class='spm-content'>
 						<image src="{{item.img_url}}" mode="aspectFill" lazy-load></image>
           	<view class='spm-shop-tags'>

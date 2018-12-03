@@ -1,4 +1,8 @@
 // pages/home/home.js
+var sectionData = [];
+var ifLoadMore = null;
+var activityId = null;
+var page = 1;//默认第一页
 Page({
 	getImageList:function(){
 		wx.request({
@@ -16,6 +20,16 @@ Page({
 			success: (res) => {
 				this.setData({
 					iconlist: res.data
+				})
+			}
+		})
+	},
+	getGoodsList:function(){
+		wx.request({
+			url: 'http://127.0.0.1:3000/shoplist',
+			success: res => {
+				this.setData({
+					col1: res.data,
 				})
 			}
 		})
@@ -42,6 +56,7 @@ Page({
   data: {
 		list:[],
 		iconlist:[],
+		col1:[],
 	},
   /**
    * 生命周期函数--监听页面加载
@@ -49,6 +64,7 @@ Page({
   onLoad: function (options) {
 			this.getImageList()
 			this.getIconList()
+			this.getGoodsList()
   },
 
   /**

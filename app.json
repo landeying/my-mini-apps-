@@ -1,17 +1,14 @@
 {
 	"pages": [
+		"pages/home/home",
+		"pages/details/details",
 		"pages/goodslist/goodslist",
-		"pages/more/more",
-			"pages/details/details",
-	
+		"pages/shopcart/shopcart",
 		"pages/profile/profile",
 		"pages/spm/spm",
-		"pages/product/product",
-		"pages/home/home",
-		
+		"pages/product/product",	
 		"pages/discounts/discounts",
-"pages/compoments/item_template/item_template",
-		"pages/shopcart/shopcart"
+		"pages/compoments/item_template/item_template"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
@@ -32,7 +29,7 @@
 				"selectedIconPath": "pages/img/home-active.png"
 			},
 			{
-				"pagePath": "pages/more/more",
+				"pagePath": "pages/product/product",
 				"text": "分类",
 				"iconPath": "pages/img/more.png",
 				"selectedIconPath": "pages/img/more-active.png"

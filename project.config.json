@@ -12,9 +12,9 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.98",
+	"libVersion": "2.4.1",
 	"appid": "wx0916ff25f0571dde",
-	"projectname": "mysmallprog",
+	"projectname": "myMiniApplet",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
